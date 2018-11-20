@@ -1,3 +1,9 @@
+module SimpleParser (
+    symbol
+    , readExpr
+    , spaces
+) where
+
 import qualified Text.ParserCombinators.Parsec as Prs
 import System.Environment
 
@@ -11,9 +17,4 @@ readExpr input = case Prs.parse symbol "Syntax Error." input of
 
 spaces :: Prs.Parser ()
 spaces = Prs.skipMany1 Prs.space
-
-main :: IO()
-main = do
-        (expr:_) <- getArgs
-        putStrLn (readExpr expr)
 
