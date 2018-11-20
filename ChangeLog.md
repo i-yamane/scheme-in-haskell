@@ -2,6 +2,7 @@
 
 ## Unreleased changes
 ### Added
+- Add tests with hspec.
 - Add Parse.hs.
 - Stack project skeleton.
 
