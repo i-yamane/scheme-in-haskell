@@ -1,6 +1,15 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
+module LispVal (
+    LispVal(..)
+    , Eval(..)
+    , IFunc(..)
+    , EnvCtx
+    , LispException(..)
+    , showVal
+) where
+
 import qualified Data.Text as T
 import Data.Typeable (Typeable)
 
