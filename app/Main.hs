@@ -1,6 +1,9 @@
-module Main where
+module Main (main) where
 
-import Lib
+import qualified LispVal as LV
+
 
 main :: IO ()
-main = someFunc
+main = do
+    putStrLn $ show LV.Nil
+
