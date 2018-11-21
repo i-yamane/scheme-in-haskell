@@ -37,7 +37,7 @@ data LispVal
     | Fun IFunc
     | Lambda IFunc EnvCtx
     | Nil
-    | Bool Bool deriving (Typeable)
+    | Bool Bool deriving (Typeable, Eq)
 
 
 instance Show LispVal where
